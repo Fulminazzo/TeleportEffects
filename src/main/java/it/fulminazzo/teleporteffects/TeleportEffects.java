@@ -13,8 +13,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
 
 @SuppressWarnings("unchecked")
-public class TeleportEffects<Player extends TeleportPlayer> extends BearPlugin<Player, BearPlayer> {
-    private static TeleportEffects<? extends TeleportPlayer> plugin;
+public class TeleportEffects<Player extends TeleportPlayer, OfflinePlayer extends BearPlayer> extends BearPlugin<Player, OfflinePlayer> {
+    private static TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
     private final Class<? extends TeleportPlayersManager<Player>> playersManager;
     private final Class<Player> playersClass;
 
@@ -25,7 +25,7 @@ public class TeleportEffects<Player extends TeleportPlayer> extends BearPlugin<P
 
     @Override
     public void onEnable() {
-        plugin = this;
+        if (this.getClass().equals(TeleportEffects.class)) plugin = this;
         setPlayerManagerClass(playersManager, playersClass);
         super.onEnable();
         if (isEnabled()) {
@@ -50,7 +50,7 @@ public class TeleportEffects<Player extends TeleportPlayer> extends BearPlugin<P
         unloadPermissions(this);
     }
 
-    public static TeleportEffects<? extends TeleportPlayer> getPlugin() {
+    public static TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> getPlugin() {
         return plugin;
     }
 }

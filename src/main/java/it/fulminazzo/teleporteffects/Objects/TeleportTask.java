@@ -1,5 +1,6 @@
 package it.fulminazzo.teleporteffects.Objects;
 
+import it.angrybear.Bukkit.Objects.BearPlayer;
 import it.angrybear.Objects.Timer.Timer;
 import it.fulminazzo.teleporteffects.Enums.ConfigOption;
 import it.fulminazzo.teleporteffects.TeleportEffects;
@@ -23,7 +24,7 @@ public abstract class TeleportTask {
         return teleportPlayer == null ? null : teleportPlayer.getPlayer();
     }
 
-    public TeleportEffects<? extends TeleportPlayer> getPlugin() {
+    public TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> getPlugin() {
         return TeleportEffects.getPlugin();
     }
 

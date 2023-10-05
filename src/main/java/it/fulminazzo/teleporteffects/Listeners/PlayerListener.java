@@ -1,5 +1,6 @@
 package it.fulminazzo.teleporteffects.Listeners;
 
+import it.angrybear.Bukkit.Objects.BearPlayer;
 import it.fulminazzo.teleporteffects.Enums.ConfigOption;
 import it.fulminazzo.teleporteffects.Enums.TeleportPermission;
 import it.fulminazzo.teleporteffects.Objects.TeleportPlayer;
@@ -17,9 +18,9 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import java.util.Optional;
 
 public class PlayerListener implements Listener {
-    private final TeleportEffects<? extends TeleportPlayer> plugin;
+    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
 
-    public PlayerListener(TeleportEffects<? extends TeleportPlayer> plugin) {
+    public PlayerListener(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin) {
         this.plugin = plugin;
     }
 

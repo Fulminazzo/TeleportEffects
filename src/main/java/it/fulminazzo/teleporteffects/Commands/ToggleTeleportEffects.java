@@ -1,5 +1,6 @@
 package it.fulminazzo.teleporteffects.Commands;
 
+import it.angrybear.Bukkit.Objects.BearPlayer;
 import it.fulminazzo.teleporteffects.Enums.Message;
 import it.fulminazzo.teleporteffects.Objects.TeleportPlayer;
 import it.fulminazzo.teleporteffects.TeleportEffects;
@@ -12,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ToggleTeleportEffects implements TabExecutor {
-    private final TeleportEffects<? extends TeleportPlayer> plugin;
+    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
 
-    public ToggleTeleportEffects(TeleportEffects<? extends TeleportPlayer> plugin) {
+    public ToggleTeleportEffects(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin) {
         this.plugin = plugin;
     }
 

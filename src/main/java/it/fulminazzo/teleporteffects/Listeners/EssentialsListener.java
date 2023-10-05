@@ -1,5 +1,6 @@
 package it.fulminazzo.teleporteffects.Listeners;
 
+import it.angrybear.Bukkit.Objects.BearPlayer;
 import it.fulminazzo.teleporteffects.Objects.TeleportPlayer;
 import it.fulminazzo.teleporteffects.TeleportEffects;
 import net.ess3.api.events.teleport.PreTeleportEvent;
@@ -8,9 +9,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 public class EssentialsListener implements Listener {
-    private final TeleportEffects<? extends TeleportPlayer> plugin;
+    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
 
-    public EssentialsListener(TeleportEffects<? extends TeleportPlayer> plugin) {
+    public EssentialsListener(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin) {
         this.plugin = plugin;
     }
 
