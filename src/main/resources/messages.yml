@@ -1,0 +1,10 @@
+prefix: "&2TeleportEffects &8| "
+
+console-cannot-execute: "&cConsole cannot execute this command."
+teleport-effects-changed: "&7Teleport effects %status%&7."
+enabled: "&aenabled"
+disabled: "&cdisabled"
+
+teleporting-in: "&7You will be teleported in &e%time% &7seconds... Please don't move!"
+teleport-cancelled: "&cYou moved and your teleport got cancelled!"
+already-teleporting: "&eThere is already a teleport in progress! &7Please wait before teleporting again."

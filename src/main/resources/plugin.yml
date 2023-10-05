@@ -1,0 +1,17 @@
+name: TeleportEffects
+version: '${project.version}'
+main: it.fulminazzo.teleporteffects.TeleportEffectsPlugin
+api-version: 1.13
+softdepend: [Essentials]
+
+commands:
+  toggleteleporteffects:
+    description: Enable or disable teleport effects.
+    permission: teleporteffects.toggle
+    aliases: [toggleteleporte, togglete, tte]
+
+permissions:
+  teleporteffects.bypass:
+    description: Allows to bypass the cooldown.
+  teleporteffects.toggle:
+    description: Permission for command /toggleteleporteffects.

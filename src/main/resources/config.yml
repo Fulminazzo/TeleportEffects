@@ -1,0 +1,68 @@
+# The duration for teleport, in seconds.
+duration: 3
+
+# The effect that should be applied on teleport.
+# For a full list go to https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+teleport-effect: DARKNESS
+
+# A list of teleport causes to be ignored during teleport.
+# For a full list go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html
+whitelisted-teleport-causes:
+  - CHORUS_FRUIT
+  - DISMOUNT
+  - END_GATEWAY
+  - END_PORTAL
+  - ENDER_PEARL
+  - MOUNT
+  - NETHER_PORTAL
+  - SPECTATE
+  - UNKNOWN
+
+from:
+  # The type of particle to use for the teleport.
+  # For a full list go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+  # (NOT BACKWARDS COMPATIBLE).
+  particle-type-stage1: GLOW
+  particle-type-stage2: GLOW
+
+  # The amount of particles to start with.
+  points: 5
+
+  # The initial offset from which the particles should be spawned (degrees).
+  initial-offset: 90
+
+  # The speed at which the particle should rotate expressed in angles (degrees).
+  rotation-angle: 20
+
+  # How much the particles height should increase for each iteration.
+  height-increment: 0.025
+
+  # The particle animation will start far and will get closer with each iteration.
+  # In here you can specify from how much far you want to start until how close you want to get.
+  initial-distance: 0.5
+  final-distance: 0.1
+
+  # If these settings are set to true, it means that previous spawned particles will
+  # not be respawned in the next iteration.
+  clear-first-stage-locations: true
+  clear-second-stage-locations: true
+
+to:
+  # The type of particle to use for the teleport.
+  # For a full list go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+  # (NOT BACKWARDS COMPATIBLE).
+  particle-type-stage1: SMOKE_NORMAL
+  particle-type-stage2: END_ROD
+
+  # The distance between one particle and another expressed in angles (degrees).
+  distance-angle: 15
+
+  # How much the particles height should decrease for each iteration.
+  height-decrement: 0.15
+
+  # The particle animation will start far and will get closer with each iteration.
+  # In here you can specify from how much far you want to start until how close you want to get.
+  initial-distance: 0.6
+  final-distance: 0.01
+
+  stage4-duration: 0.1
