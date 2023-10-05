@@ -1,5 +1,5 @@
 # TeleportEffects
-**TeleportEffects** is a **Bukkit** plugin that **intercepts** every **teleport** and **re-schedule it** while creating some **particle effects** on the **start** and **destination points**.
+**TeleportEffects** is a **Bukkit** plugin that **intercepts** every **teleport** and **re-schedules it** while creating some **particle effects** on the **start** and **destination points**.
 <br>
 This is a page presentation for the plugin, if you are looking for the [Wiki](https://github.com/Fulminazzo/TeleportEffects/wiki/home) 
 you should go [here](https://github.com/Fulminazzo/TeleportEffects/wiki/home).
