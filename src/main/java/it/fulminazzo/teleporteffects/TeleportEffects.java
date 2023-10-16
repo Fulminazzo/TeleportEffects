@@ -13,7 +13,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
 
 @SuppressWarnings("unchecked")
-public class TeleportEffects<Player extends TeleportPlayer, OfflinePlayer extends BearPlayer> extends BearPlugin<Player, OfflinePlayer> {
+public abstract class TeleportEffects<Player extends TeleportPlayer, OfflinePlayer extends BearPlayer> extends BearPlugin<Player, OfflinePlayer> {
     private static TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
     private final Class<? extends TeleportPlayersManager<Player>> playersManager;
     private final Class<Player> playersClass;

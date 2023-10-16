@@ -1,6 +1,6 @@
 package it.fulminazzo.teleporteffects.Utils;
 
-import it.angrybear.Bukkit.Utils.ParticlesUtils;
+import it.fulminazzo.teleporteffects.Utils.ParticlesUtils;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;

@@ -1,6 +1,6 @@
 package it.fulminazzo.teleporteffects.Objects;
 
-import it.angrybear.Bukkit.Utils.ParticlesUtils;
+import it.fulminazzo.teleporteffects.Utils.ParticlesUtils;
 import it.angrybear.Objects.ReflObject;
 import it.angrybear.Objects.Timer.Timer;
 import it.fulminazzo.teleporteffects.Enums.ConfigOption;
