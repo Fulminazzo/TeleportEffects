@@ -36,6 +36,7 @@ public class PlayerListener implements Listener {
         if (event.isCancelled()) return;
         Location teleportLocation = event.getTo();
         if (teleportLocation == null) return;
+        if (ConfigOption.DURATION.getInt() < 1) return;
         if (ConfigOption.WHITELISTED_TELEPORT_CAUSES.getTeleportCauses().contains(event.getCause())) return;
         Player player = event.getPlayer();
         if (player.hasPermission(TeleportPermission.BYPASS.getPermission())) return;

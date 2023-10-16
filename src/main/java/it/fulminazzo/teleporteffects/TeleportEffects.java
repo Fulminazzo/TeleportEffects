@@ -25,7 +25,7 @@ public class TeleportEffects<Player extends TeleportPlayer, OfflinePlayer extend
 
     @Override
     public void onEnable() {
-        if (this.getClass().equals(TeleportEffects.class)) plugin = this;
+        plugin = this;
         setPlayerManagerClass(playersManager, playersClass);
         super.onEnable();
         if (isEnabled()) {
