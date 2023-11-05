@@ -3,6 +3,7 @@ version: '${project.version}'
 main: it.fulminazzo.teleporteffects.TeleportEffectsPlugin
 api-version: 1.13
 softdepend: [Essentials]
+folia-supported: true
 
 commands:
   toggleteleporteffects:

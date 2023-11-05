@@ -10,11 +10,12 @@ import java.util.UUID;
 public class TeleportPlayersManager<Player extends TeleportPlayer> extends BearPlayersManager<Player> {
     public TeleportPlayersManager(BearPlugin<?, ?> plugin, Class<Player> customPlayerClass) {
         super(plugin, customPlayerClass);
+        onQuit(TeleportPlayer::stopAllTasks);
     }
 
     @Override
-    public <Player1> Player getPlayer(Player1 player1) {
-        return super.getPlayer(player1);
+    public <P> Player getPlayer(P player) {
+        return super.getPlayer(player);
     }
 
     @Override

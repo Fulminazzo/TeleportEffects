@@ -2,11 +2,13 @@
 duration: 3
 
 # The effect that should be applied on teleport.
-# For a full list go to https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+# For a full list go to:
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
 teleport-effect: DARKNESS
 
 # A list of teleport causes to be ignored during teleport.
-# For a full list go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html
+# For a full list go to:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html
 whitelisted-teleport-causes:
   - CHORUS_FRUIT
   - DISMOUNT
@@ -18,10 +20,91 @@ whitelisted-teleport-causes:
   - SPECTATE
   - UNKNOWN
 
+# The following section contains all the available messages that can be sent during a teleport.
+# If you want to disable one, just use "".
+teleporting-messages:
+  # Simple string messages sent to players.
+  messages:
+    # If set to true, the teleporting-in message will be sent every second.
+    every-second: true
+    teleporting-in: "&7You will be teleported in &e%time% &7seconds... Please don't move!"
+    teleport-cancelled: "&cYou moved and your teleport got cancelled!"
+  # Titles and subtitles.
+  titles:
+    # If set to true, the teleporting-in title will be sent every second.
+    every-second: true
+    teleporting-in:
+      title: "&7Teleporting in &e%time% &7seconds"
+      subtitle: "&c&lPlease don't move!"
+    teleport-cancelled:
+      title: "&cTeleport cancelled!"
+      subtitle: ""
+  # BossBar (colors, styles and flag will NOT be available in 1.8 and lower).
+  boss-bar:
+    teleporting-in:
+      title: "&7Teleporting in &e%time% &7seconds"
+      # For a full list go to:
+      # (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/class-use/BarColor.html)
+      bar-color: GREEN
+      # For a full list go to:
+      # (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/class-use/BarStyle.html)
+      bar-style: SOLID
+      # For a full list go to:
+      # (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/class-use/BarFlag.html)
+      bar-flags: []
+    teleport-cancelled:
+      title: "&cTeleport cancelled!"
+      # For a full list go to:
+      # (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/class-use/BarColor.html)
+      bar-color: RED
+      # For a full list go to:
+      # (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/class-use/BarStyle.html)
+      bar-style: SOLID
+      # For a full list go to:
+      # (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/class-use/BarFlag.html)
+      bar-flags: []
+      # Duration of the BossBar in seconds
+      duration: 3
+  # Action Bar progress.
+  action-bar:
+    # Length in characters (colors NOT included).
+    length: 30
+    # If set to true, the progress bar will be full in the beginning and empty at the end.
+    reverse: false
+    progress-on: "&a▇"
+    progress-off: "&7▇"
+    progress-cancelled: "&c▇"
+  # Sounds section. For a full list go to:
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+  # (or use https://helpch.at/docs/%version%/index.html?org/bukkit/Sound.html
+  # replacing %version% with the one you are interested in).
+  sound:
+    # Sound played one time, before starting teleport.
+    teleport-start:
+      name: "BLOCK_NOTE_BLOCK_PLING"
+      volume: 10
+      pitch: 10
+    # Sound played every second, before teleporting.
+    teleporting:
+      name: "BLOCK_NOTE_BLOCK_PLING"
+      volume: 10
+      pitch: 10
+    # Sound played one time, after teleport finishes.
+    teleport-finish:
+      name: "ENTITY_EXPERIENCE_ORB_PICKUP"
+      volume: 10
+      pitch: 1
+    # Sound played when cancelling teleport.
+    teleport-cancelled:
+      name: "ENTITY_CAT_AMBIENT"
+      volume: 10
+      pitch: -10
+
 from:
   # The type of particle to use for the teleport.
-  # For a full list go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
-  # (NOT BACKWARDS COMPATIBLE).
+  # For a full list go to:
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html (>= 1.13) or
+  # https://helpch.at/docs/1.12.2/org/bukkit/Effect.html (<= 1.12)
   particle-type-stage1: GLOW
   particle-type-stage2: GLOW
 
@@ -49,8 +132,9 @@ from:
 
 to:
   # The type of particle to use for the teleport.
-  # For a full list go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
-  # (NOT BACKWARDS COMPATIBLE).
+  # For a full list go to:
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html (>= 1.13) or
+  # https://helpch.at/docs/1.12.2/org/bukkit/Effect.html (<= 1.12)
   particle-type-stage1: SMOKE_NORMAL
   particle-type-stage2: END_ROD
 

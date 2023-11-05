@@ -11,8 +11,6 @@ public enum Message {
     ENABlED("enabled"),
     DISABLED("disabled"),
 
-    TELEPORTING_IN("teleporting-in"),
-    TELEPORT_CANCELLED("teleport-cancelled"),
     ALREADY_TELEPORTING("already-teleporting");
 
     private final String path;

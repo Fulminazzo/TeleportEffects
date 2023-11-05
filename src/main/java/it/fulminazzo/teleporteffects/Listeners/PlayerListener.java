@@ -18,9 +18,9 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import java.util.Optional;
 
 public class PlayerListener implements Listener {
-    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
+    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer<?>> plugin;
 
-    public PlayerListener(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin) {
+    public PlayerListener(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer<?>> plugin) {
         this.plugin = plugin;
     }
 

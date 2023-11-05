@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ToggleTeleportEffects implements TabExecutor {
-    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
+    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer<?>> plugin;
 
-    public ToggleTeleportEffects(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin) {
+    public ToggleTeleportEffects(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer<?>> plugin) {
         this.plugin = plugin;
     }
 

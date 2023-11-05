@@ -48,7 +48,7 @@ public class FromTask extends TeleportTask {
             stage2(spawnLocation, locations.subList(locations.size() - points, locations.size()));
         });
         task.setInterval(0);
-        task.setSecondIntermediateAction(timer -> {
+        task.setSecondIntermediateAction(time -> {
             if (isOffline()) return;
             if (ConfigOption.FROM_CLEAR_FIRST_STAGE_LOCATIONS.getBoolean()) locations.clear();
             Location[] particlesLocation = MathUtils.getParticlesLocation(spawnLocation, points,

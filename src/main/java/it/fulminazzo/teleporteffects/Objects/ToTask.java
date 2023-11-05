@@ -2,6 +2,7 @@ package it.fulminazzo.teleporteffects.Objects;
 
 import it.angrybear.Objects.Timer.Timer;
 import it.fulminazzo.teleporteffects.Enums.ConfigOption;
+import it.fulminazzo.teleporteffects.Enums.ConfigOptions.SoundOption;
 import it.fulminazzo.teleporteffects.Utils.MathUtils;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -34,6 +35,10 @@ public class ToTask extends TeleportTask {
             stop();
             if (isOffline()) return;
             getPlayer().teleport(destinationLocation, PlayerTeleportEvent.TeleportCause.UNKNOWN);
+            // Play actionbar
+            teleportPlayer.sendActionBar(ConfigOption.DURATION.getDouble(), false);
+            // Play sound
+            SoundOption.TELEPORT_FINISH.getSound().playSound(getPlayer());
             stage4();
         });
         task.setInterval(0);

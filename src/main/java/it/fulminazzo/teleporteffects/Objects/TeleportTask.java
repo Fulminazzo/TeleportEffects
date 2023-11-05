@@ -24,7 +24,7 @@ public abstract class TeleportTask {
         return teleportPlayer == null ? null : teleportPlayer.getPlayer();
     }
 
-    public TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> getPlugin() {
+    public TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer<?>> getPlugin() {
         return TeleportEffects.getPlugin();
     }
 

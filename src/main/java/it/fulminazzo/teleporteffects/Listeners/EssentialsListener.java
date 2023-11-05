@@ -9,9 +9,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 public class EssentialsListener implements Listener {
-    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin;
+    private final TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer<?>> plugin;
 
-    public EssentialsListener(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer> plugin) {
+    public EssentialsListener(TeleportEffects<? extends TeleportPlayer, ? extends BearPlayer<?>> plugin) {
         this.plugin = plugin;
     }
 
